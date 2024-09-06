@@ -1,0 +1,27 @@
+/* >>>>>  FONT STYLES <<<<< */
+
+
+/*  */
+
+/* >>>>> GENERAL STYLES <<<<< */
+    section{
+
+    }
+/*  */
+
+/* >>>>> FORM CONTAINER STYLES <<<<< */
+    .formContainer{
+
+    }
+
+    .form{
+
+    }
+
+    .personalInfo{
+
+
+        display: flex;
+        flex-direction: row;
+    }
+/*  */
