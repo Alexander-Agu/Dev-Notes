@@ -178,16 +178,38 @@
         height: 30px;
         width: 200px;
     }
+    .datesContainer p {
+        font-size: 18px;
+        background-color: #242424b9;
+        color: white;
+
+        border: 1px solid #242424;
+        border-radius: 3px;
+        outline: none;
+
+        height: 30px;
+        width: 200px;
+
+        display: flex;
+        align-items: center;
+    }
 
     /* >>> RESPONSIVE MOBILE <<< */
     @media(max-width: 800px) {
         .datesContainer input {
             width: 180px;
         }
+        .datesContainer p {
+            width: 180px;
+        }
     }
 
     @media(max-width: 500px) {
-        .d input {
+        .datesContainer input {
+
+            width: 160px;
+        }
+        .datesContainer p {
 
             width: 160px;
         }
