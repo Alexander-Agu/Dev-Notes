@@ -1,0 +1,70 @@
+/* >>>>> TASK CONTAINER STYLES <<<<< */
+    .taskDataContainer{
+        background-color: #242424;
+
+        border-radius: 2px 50px 2px 50px;
+
+        height: 150px;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: c;
+
+    }
+
+    .taskDataContainer h1,
+    .taskDataContainer h2 {
+        color: white;
+    }
+
+    .details{
+        padding: 7px;
+
+        display: grid;
+        place-content: center;
+        gap: 0.7rem;
+    }
+    /* >>> RESPONSIVE MOBILE <<< */
+
+/*  */
+
+/* >>>>> DETAILS STLYES <<<<< */
+    .names h2{
+        font-size: 17px;
+    }
+
+    .details .task{
+        font-size: 35px;
+    }
+
+    .dates h2{
+        font-size: 18px;
+        color: grey;
+    }
+    /* >>> RESPONSIVE MOBILE <<< */
+    @media(max-width: 800px){
+        .details .task{
+            font-size: 25px;
+        }
+    }
+/*  */
+
+/* >>>>> DELETE BUTTON STYLES <<<<< */
+    .xButton{
+        padding: 5px;
+
+        display: flex;
+        align-items: center;
+    }
+    .deleteBTN{
+        background-color: transparent;
+        outline: none;
+        color: white;
+
+        width: 40px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }

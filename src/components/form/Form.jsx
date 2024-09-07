@@ -1,30 +1,33 @@
 import React, { useState } from 'react'
+import Task from '../task/Task';
 import './form.css'
 
 function Form() {
     const [form, setForm] = useState({firstName:'', lastName: '', task: '', submitDate: ''});
     const currentDate = new Date().toDateString();
+    let test = [{hg:78, ygh:67}]
 
-    // Save the froms data into a basket
+    console.log(test + {jb:687, jghg:7})
 
-    let tasks = [];
-    // Appends an object that contains the forms inform
+    // Appends an object that contains the forms info
     function submitNote(){
-        if(form.lastName === '' && form.firstName === '' && form.task === '' && form.submitDate === ''){
-            alert('Please fill in alll the boxes')
-        } else{
-            tasks.push(
+        if(form.lastName !== '' && form.firstName !== '' && form.task !== '' && form.submitDate !== ''){
+            localStorage.setItem('Dev Tasks', JSON.stringify( 
                 {
                     firstName: form.firstName,
                     lastName: form.lastName,
                     task: form.task,
                     currentDate: currentDate,
                     submitDate: form.submitDate
-                }
-            );
-            localStorage.setItem('Dev Tasks', JSON.stringify(tasks));
+                }));
+        } else{
+            alert('Please fill in alll the boxes')
         };
+
+        // Resets the input boxes
+        setForm({firstName: '', lastName: '', task: '', submitDate: ''});
     }
+
   return (
     <section>
         <div className="logo">
@@ -63,7 +66,7 @@ function Form() {
                 </div>
             </div>
 
-            <button onClick={submitNote}>
+            <button onClick={submitNote} className='submitBTN'>
                 <span className="material-symbols-outlined">
                     add
                 </span>

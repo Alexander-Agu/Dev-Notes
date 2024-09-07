@@ -14,6 +14,9 @@
     font-style: normal; */
 
 /* >>>>> GENERAL STYLES <<<<< */
+    body{
+        background-color: transparent;
+    }
     section{
         max-width: 500px;
         padding: 5px;
@@ -215,3 +218,16 @@
         }
     }
 /*  */
+
+.submitBTN{
+    color: white;
+    font-weight: bolder;
+    background-color: #242424;
+
+    border: 1px solid #242424b9;
+    border-radius: 30px 2px 30px 2px;
+    outline: none;
+
+    height: 40px;
+    width: 40px;
+}

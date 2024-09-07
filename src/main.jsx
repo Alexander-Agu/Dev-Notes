@@ -6,9 +6,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className="body">
-      <Form />
-    </div>
-
+    <Form />
+    <Task />
   </React.StrictMode>,
 )
