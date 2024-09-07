@@ -1,17 +1,80 @@
 /* >>>>>  FONT STYLES <<<<< */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Protest+Guerrilla&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Matemasie&family=Protest+Guerrilla&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Matemasie&family=Protest+Guerrilla&family=Rowdies:wght@300;400;700&display=swap');
 /*  */
+
+/*     font-family: "Matemasie",
+    sans-serif;
+    font-weight: 400;
+    font-style: normal; */
 
 /* >>>>> GENERAL STYLES <<<<< */
     section{
+        max-width: 500px;
+        padding: 5px;
+    }
 
+    h2 {
+        font-family: "Rowdies", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+/*  */
+
+/* >>>>> LOGO <<<<< */
+    .logo{
+        background-color: #242424;
+        border-radius: 50px 2px 50px 2px;
+
+        height: 120px;
+        padding: 16px;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .logoName{
+        color: white;
+
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.5rem;
+    }
+    /* >>> RESPONSIVE MOBILE <<< */
+    @media(max-width: 800px){
+        .logo{
+            border-radius: 40px 2px 40px 2px;
+
+            height: 80px;
+        }  
+        
+        .logoName{
+            font-size: 2rem;
+        }
+    }
+
+    @media(max-width: 500px){
+        .logo{
+            border-radius: 30px 2px 30px 2px;
+
+            height: 60px;
+        }  
+        
+        .logoName{
+            font-size: 1.7rem;
+        }
     }
 /*  */
 
 /* >>>>> FORM CONTAINER STYLES <<<<< */
     .formContainer{
-
+        width: 100%;
     }
 
     .form{
@@ -19,9 +82,114 @@
     }
 
     .personalInfo{
-
+        height: 150px;
 
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .personalInfo input{
+        font-size: 18px;
+        background-color: #242424b9;
+        color: white;
+
+        border: 1px solid #242424;
+        border-radius: 3px;
+        outline: none;
+
+        height: 30px;
+        width: 200px;
+    }
+    /* >>> RESPONSIVE MOBILE <<< */
+    @media(max-width: 800px){
+        .personalInfo input{
+            width: 180px;
+        }
+    }
+    @media(max-width: 500px){
+        .personalInfo input{
+            width: 160px;
+        }
+    }
+/*  */
+
+/* >>>>> TASK CONTAINER <<<<< */
+    .taskContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   
+    }
+
+    .taskContainer h2{
+        text-align: left;
+    }
+
+    .taskInput{
+        background-color: #242424b9;
+        border-radius: 3px;
+        color: white;
+        border: 1px solid black;
+        outline: none;
+        font-size: 18px;
+        padding: 1px;
+        
+        height: 50px;
+        width: 450px;
+    }
+    /* >>> RESPONSIVE MOBILE <<< */
+    @media(max-width: 800px){
+        .taskInput{
+            width: 350px;
+        }
+    }
+
+    @media(max-width: 500px){
+        .taskInput{
+            height: 40px;
+            width: 300px;
+        }
+    }
+/*  */
+
+/* >>>>> DATES CONTAINER STYLES <<<<< */
+    .datesContainer {
+        height: 150px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .datesContainer input {
+        font-size: 18px;
+        background-color: #242424b9;
+        color: white;
+
+        border: 1px solid #242424;
+        border-radius: 3px;
+        outline: none;
+
+        height: 30px;
+        width: 200px;
+    }
+
+    /* >>> RESPONSIVE MOBILE <<< */
+    @media(max-width: 800px) {
+        .datesContainer input {
+            width: 180px;
+        }
+    }
+
+    @media(max-width: 500px) {
+        .d input {
+
+            width: 160px;
+        }
     }
 /*  */
