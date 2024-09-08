@@ -5,27 +5,26 @@ import './form.css'
 function Form() {
     const [form, setForm] = useState({firstName:'', lastName: '', task: '', submitDate: ''});
     const currentDate = new Date().toDateString();
-    let test = [{hg:78, ygh:67}]
 
-    console.log(test + {jb:687, jghg:7})
+    // Uses the 
+    let tasksData = JSON.parse(localStorage.getItem('Dev Tasks')) || [];
 
-    // Appends an object that contains the forms info
+    // Saves the form data into local storage
+    // Should erase the form data once saved into local storage
     function submitNote(){
-        if(form.lastName !== '' && form.firstName !== '' && form.task !== '' && form.submitDate !== ''){
-            localStorage.setItem('Dev Tasks', JSON.stringify( 
-                {
-                    firstName: form.firstName,
-                    lastName: form.lastName,
-                    task: form.task,
-                    currentDate: currentDate,
-                    submitDate: form.submitDate
-                }));
-        } else{
-            alert('Please fill in alll the boxes')
-        };
+        if(form.firstName !== '' && form.lastName !== '' && form.task !== '' && form.submitDate !== ''){
+            tasksData.push({
+                firstName: form.firstName,
+                lastName: form.lastName,
+                task: form.task,
+                submitDate: form.submitDate
+            })
 
-        // Resets the input boxes
-        setForm({firstName: '', lastName: '', task: '', submitDate: ''});
+        } else{
+            alert('Please fill in all the boxes')
+        }
+
+        localStorage.setItem('Dev Tasks', JSON.stringify(tasksData));
     }
 
   return (
