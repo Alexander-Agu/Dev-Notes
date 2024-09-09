@@ -2,17 +2,23 @@ import React from 'react'
 import './task.css'
 
 function Task() {
-  let storageData = JSON.parse(localStorage.getItem('Dev Tasks'));
-  console.log(storageData);
+  let taskBasket = JSON.parse(localStorage.getItem('Dev Tasks'))
 
-  function deleteBTN(){
-    document.querySelector('.taskDataContainer').remove()
+
+  function deleteBTN(taskID){
+    for(let i = 0; i < taskBasket.length; i++){
+      if(taskBasket[i].task === taskID){
+        taskBasket.splice(i, 1);
+      }
+    }
+    localStorage.setItem('Dev Tasks', JSON.stringify(taskBasket))
+      console.log(taskBasket)
   };
 
 
 
-  if(storageData){
-    return storageData.map(x => {
+  if(taskBasket){
+    return taskBasket.map(x => {
 
       return <section className="taskDataContainer" key={x.task}>
         <div className='details'>
@@ -28,7 +34,8 @@ function Task() {
         </div>
 
         <div className="xButton">
-          <button className='deleteBTN' onClick={deleteBTN} key={x.task}>
+          <button className='deleteBTN' onClick={() => deleteBTN(x.task)} key={x.task}>
+          
             <span className="material-symbols-outlined">
               delete_sweep
             </span>

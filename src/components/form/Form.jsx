@@ -71,6 +71,8 @@ function Form() {
                 </span>
             </button>
         </div>
+
+        {<Task />}
     </section>
   )
 }
