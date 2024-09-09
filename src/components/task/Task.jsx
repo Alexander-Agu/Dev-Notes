@@ -1,21 +1,17 @@
 import React from 'react'
 import './task.css'
 
+let taskBasket = JSON.parse(localStorage.getItem('Dev Tasks'));
 function Task() {
-  let taskBasket = JSON.parse(localStorage.getItem('Dev Tasks'))
-
-
   function deleteBTN(taskID){
     for(let i = 0; i < taskBasket.length; i++){
       if(taskBasket[i].task === taskID){
         taskBasket.splice(i, 1);
       }
-    }
-    localStorage.setItem('Dev Tasks', JSON.stringify(taskBasket))
-      console.log(taskBasket)
+    };
+    
+    localStorage.setItem('Dev Tasks', JSON.stringify(taskBasket));
   };
-
-
 
   if(taskBasket){
     return taskBasket.map(x => {

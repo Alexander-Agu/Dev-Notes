@@ -6,7 +6,6 @@ function Form() {
     const [form, setForm] = useState({firstName:'', lastName: '', task: '', submitDate: ''});
     const currentDate = new Date().toDateString();
 
-    // Uses the 
     let tasksData = JSON.parse(localStorage.getItem('Dev Tasks')) || [];
 
     // Saves the form data into local storage
@@ -24,6 +23,15 @@ function Form() {
             alert('Please fill in all the boxes')
         }
 
+        // Resets the form
+        setForm({
+            firstName: '',
+            lastName: '',
+            task: '',
+            submitDate: ''
+        })
+
+        // Save form data to local storage
         localStorage.setItem('Dev Tasks', JSON.stringify(tasksData));
     }
 
