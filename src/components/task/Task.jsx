@@ -2,6 +2,7 @@ import React from 'react'
 import './task.css'
 
 let taskBasket = JSON.parse(localStorage.getItem('Dev Tasks'));
+
 function Task() {
   function deleteBTN(taskID){
     for(let i = 0; i < taskBasket.length; i++){
@@ -15,7 +16,6 @@ function Task() {
 
   if(taskBasket){
     return taskBasket.map(x => {
-
       return <section className="taskDataContainer" key={x.task}>
         <div className='details'>
           <div className="names">
