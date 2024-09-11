@@ -12,6 +12,7 @@ function Task() {
     };
     
     localStorage.setItem('Dev Tasks', JSON.stringify(taskBasket));
+    window.location.reload(true);
   };
 
   if(taskBasket){

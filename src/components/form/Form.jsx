@@ -33,6 +33,7 @@ function Form() {
 
         // Save form data to local storage
         localStorage.setItem('Dev Tasks', JSON.stringify(tasksData));
+        window.location.reload(true);
     }
 
   return (
